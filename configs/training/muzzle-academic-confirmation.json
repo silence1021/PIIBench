@@ -1,0 +1,8 @@
+{
+  "search_output": "outputs/reproduction_inputs/muzzle-academic/run-01/search",
+  "output": "outputs/reproduction_inputs/muzzle-academic/run-01/confirmation",
+  "repeats": 2,
+  "max_requests": 1,
+  "max_pi_requests": 100,
+  "max_pi_tasks": 4
+}

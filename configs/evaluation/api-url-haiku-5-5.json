@@ -1,0 +1,62 @@
+{
+  "experiment": {
+    "attack_method": "off",
+    "web_injection_channel": "url",
+    "mode": "api",
+    "harness_type": null
+  },
+  "observation_representation": "backend_native",
+  "target": {
+    "backend": "anthropic",
+    "model": "claude-haiku-5-5",
+    "max_response_tokens": null,
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "temperature": null,
+    "api_id": null,
+    "client_settings": {
+      "base_url": "https://api.anthropic.com/v1",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "request_timeout_seconds": 600,
+      "request_parameters": {},
+      "omit_parameters": [
+        "temperature",
+        "top_p"
+      ],
+      "request_headers": {}
+    },
+    "api": "anthropic-messages",
+    "top_p": null,
+    "thinking": {
+      "type": "adaptive"
+    },
+    "output_config": {
+      "effort": "medium"
+    }
+  },
+  "task_id": "api-url-haiku-5-5",
+  "output_dir": null,
+  "repeats": 4,
+  "api_concurrency_per_task": 1,
+  "max_attempts": 3,
+  "adapter_name": "anthropic-url",
+  "url_prompt_defense": {
+    "prompt_file": "prompts/attacker/in_agent_filter.txt",
+    "placement": "system"
+  },
+  "tool_config": {
+    "url_access": "anthropic_native_web_fetch",
+    "model_metadata": {
+      "id": "claude-haiku-5-5",
+      "max_tokens": 128000
+    }
+  },
+  "allowed_conditions": [
+    "off",
+    "on"
+  ],
+  "tasks": null,
+  "artifact": null,
+  "adapter_timeout_seconds": 610
+}

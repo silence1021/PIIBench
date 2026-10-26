@@ -1,0 +1,9 @@
+**
+!defipi/
+!defipi/**
+!containers/
+!containers/agents/
+!containers/agents/**
+**/__pycache__/
+**/*.pyc
+**/node_modules/

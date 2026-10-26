@@ -1,0 +1,22 @@
+{
+  "training_prompts": "data/training_prompts.json",
+  "training_base_request_id": "B1",
+  "output_dir": "outputs/piiguard-data",
+  "scenarios": {
+    "academic": {
+      "source_seeds": "data/academic/seeds.json",
+      "saved_split": "data/academic/split.json",
+      "html_dir": "data/academic/html",
+      "table_seed": 42
+    },
+    "news": {
+      "source_seeds": "data/news/seeds.json",
+      "saved_split": "data/news/split.json",
+      "table_seed": 42
+    }
+  },
+  "benchmark": {
+    "academic": "data/benchmark/academic",
+    "news": "data/benchmark/news"
+  }
+}

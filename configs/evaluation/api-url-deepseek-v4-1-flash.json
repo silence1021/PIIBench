@@ -1,0 +1,57 @@
+{
+  "experiment": {
+    "attack_method": "off",
+    "web_injection_channel": "url",
+    "mode": "api",
+    "harness_type": null
+  },
+  "observation_representation": "backend_native",
+  "target": {
+    "backend": "openrouter",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "api_id": null,
+    "api": "openai-completions",
+    "client_settings": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "request_timeout_seconds": 600,
+      "request_parameters": {
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }
+      },
+      "request_headers": {
+        "X-OpenRouter-Metadata": "enabled"
+      }
+    }
+  },
+  "task_id": "api-url-deepseek-v4-1-flash",
+  "output_dir": null,
+  "repeats": 4,
+  "api_concurrency_per_task": 1,
+  "max_attempts": 3,
+  "adapter_name": "openrouter-url",
+  "url_prompt_defense": {
+    "prompt_file": "prompts/attacker/in_agent_filter.txt",
+    "placement": "system"
+  },
+  "tool_config": {
+    "provider_name": null,
+    "capture_upstream_debug": true,
+    "max_tool_calls": 20,
+    "execution_authorized": true,
+    "engine": "openrouter",
+    "url_access": "openrouter_server_web_fetch"
+  },
+  "allowed_conditions": [
+    "off",
+    "on"
+  ],
+  "tasks": null,
+  "artifact": null,
+  "adapter_timeout_seconds": 610
+}

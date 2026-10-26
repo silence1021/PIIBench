@@ -1,0 +1,20 @@
+{
+  "originals_file": "../../local_data/autoguard/originals.jsonl",
+  "output_file": "../../local_data/autoguard/paraphrased_cases.jsonl",
+  "request_budget": 100,
+  "model_override": {
+    "model": "gpt-6-luna",
+    "backend": "openai",
+    "reasoning_effort": "medium",
+    "temperature": null,
+    "max_tokens": null,
+    "client_settings": {
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "request_timeout_seconds": 600,
+      "request_parameters": {},
+      "omit_parameters": [],
+      "request_headers": {}
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "context_file": "../../examples/generation/contexts.jsonl",
+  "attack_file": "../../prompts/gepa/gepa_initial_news.json",
+  "count": 1,
+  "attacks_per_context": 1,
+  "variants_per_attack": 1,
+  "positions": "after",
+  "attack_mode": "cycle",
+  "seed": 42,
+  "table_seed": 42,
+  "shuffle_contexts": false,
+  "max_samples": null,
+  "output_json": "../../outputs/generated/seeds.json",
+  "output_html_dir": "../../outputs/generated/html",
+  "enable_injection": false
+}

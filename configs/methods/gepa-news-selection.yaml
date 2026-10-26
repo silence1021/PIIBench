@@ -1,0 +1,54 @@
+# Run after cli.gepa search. prepare is offline; run makes model requests.
+# All position winners participate in objective/D/J screening. Only ties use
+# these additional 50 pages; no candidate ID or position is preselected.
+source: outputs/gepa-news/output_json.json
+pages: data/gepa/news/selection50/pages.json
+tasks: data/gepa/news/selection50/tasks.json
+split_manifest: data/news/split.json
+reserved_records: data/news/seeds.json
+output_dir: outputs/gepa-news-selection
+page_count: 50
+repeats: 1
+concurrency: 10
+max_attempts: 3
+joint_weight: 0.1
+target:
+  backend: openrouter
+  model: deepseek/deepseek-v4.1-flash
+  reasoning_effort: high
+  temperature: null
+  max_response_tokens: null
+  required_finish_reasons: [stop]
+  api_id: null
+  client_settings:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    request_timeout_seconds: 600
+    request_parameters:
+      reasoning:
+        exclude: false
+    omit_parameters: []
+    request_headers:
+      X-OpenRouter-Metadata: enabled
+filter:
+  backend: openrouter
+  model: openai/gpt-6-luna
+  reasoning_effort: medium
+  temperature: null
+  max_response_tokens: null
+  required_finish_reasons: [stop]
+  prompt_variant: canonical
+  prompt_profile: news
+  prompt_override: null
+  api_id: null
+  client_settings:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    request_timeout_seconds: 600
+    request_parameters:
+      provider:
+        only: [openai]
+        allow_fallbacks: false
+        require_parameters: true
+    omit_parameters: []
+    request_headers: {}

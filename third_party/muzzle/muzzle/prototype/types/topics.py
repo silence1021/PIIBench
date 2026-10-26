@@ -1,0 +1,10 @@
+# Topic types
+EXPLORER_TOPIC_TYPE = "explorer"
+SUMMARIZER_TOPIC_TYPE = "summarizer"
+PROMPTER_TOPIC_TYPE = "prompter"
+REPHRASER_TOPIC_TYPE = "rephraser"
+GRAFTER_TOPIC_TYPE = "grafter"
+OUTPUT_TOPIC_TYPE = "output"
+DISPATCHER_TOPIC_TYPE = "dispatcher"
+JUDGE_TOPIC_TYPE = "judge"
+PAIR_TOPIC_TYPE = "pair"

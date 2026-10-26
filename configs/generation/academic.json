@@ -1,0 +1,23 @@
+{
+  "personas": "../../local_data/personas/personas.json",
+  "output_root": "../../local_data/academic_pages",
+  "template_cache_root": "../../local_data/template_cache",
+  "jobs": 4,
+  "incremental": true,
+  "browser_validation": true,
+  "validation_settings": {
+    "desktop_viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "navigation_timeout_ms": 30000,
+    "theme_wait_ms": 100,
+    "viewport_wait_ms": 50,
+    "browser_launch_timeout_ms": 30000,
+    "action_timeout_ms": 30000
+  }
+}

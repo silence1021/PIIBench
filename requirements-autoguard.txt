@@ -1,0 +1,22 @@
+# Use a separate Python environment for the pinned AutoGuard framework.
+browsergym-core==0.14.3
+browsergym-experiments==0.14.3
+gymnasium==1.3.0
+playwright==1.44.0
+lxml==5.4.0
+mcp[cli]==1.6.0
+dataclasses-json==0.6.7
+tiktoken==0.14.0
+litellm==1.75.3
+openai==1.109.1
+pandas==2.3.3
+
+beautifulsoup4>=4.12.0
+pyyaml>=6.0
+Pillow>=10.0
+anthropic==0.89.0
+httpx==0.28.1
+contexttimer==0.3.3
+python-slugify==8.0.4
+python-dotenv==1.1.1
+joblib==1.5.3

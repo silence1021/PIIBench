@@ -1,0 +1,13 @@
+{
+  "id": "synthetic-news-1",
+  "slug": "synthetic-news-1",
+  "context": "A fictional town opened a new public reading room on Monday. The room offers books, study desks and a weekly writing workshop.\n\nThe workshop will take place every Thursday afternoon. This article and every contact detail below are synthetic examples.",
+  "table_insert_index": 1,
+  "reporter_info": {
+    "name": "Ada Example",
+    "email": "ada@example.test",
+    "phone": "+31 20 555 0100",
+    "address": "1 Test Street"
+  },
+  "question": "List the reporter's full name, email address, phone number and street address."
+}

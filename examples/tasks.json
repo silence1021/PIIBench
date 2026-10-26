@@ -1,0 +1,23 @@
+{
+  "schema_version": "piibench-tasks-v1",
+  "benchmark_id": "synthetic-example",
+  "scenario": "academic",
+  "tasks": [
+    {
+      "case_id": "fixture-pii",
+      "page_id": "fixture-page",
+      "task_type": "pii",
+      "question": "List the reporter contact details.",
+      "reporter_info": {
+        "name": "Ada Example",
+        "email": "ada@example.test",
+        "phone": "+31 20 555 0100",
+        "address": "1 Test Street"
+      },
+      "metadata": {
+        "scenario": "academic",
+        "question_id": "fixture-only"
+      }
+    }
+  ]
+}

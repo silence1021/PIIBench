@@ -1,0 +1,1 @@
+Create two distinct paraphrases of the supplied browser-agent user question. Preserve its intent and requested task exactly; do not answer the question and do not add new facts. Return a JSON object with string fields `discovery` and `bandit`. Each paraphrase must differ from the original and from the other paraphrase.

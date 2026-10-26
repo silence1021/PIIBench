@@ -1,0 +1,84 @@
+{
+  "experiment": {
+    "attack_method": "off",
+    "web_injection_channel": "url",
+    "mode": "agent",
+    "harness_type": "dsh"
+  },
+  "observation_representation": "backend_native",
+  "target": {
+    "backend": "deepseek",
+    "model": "deepseek-flash",
+    "api": "openai-completions",
+    "reasoning_effort": "high",
+    "temperature": null,
+    "max_response_tokens": null,
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "api_id": null,
+    "client_settings": {
+      "base_url": "https://api.deepseek.com",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "request_timeout_seconds": 120,
+      "request_parameters": {
+        "thinking": {
+          "type": "enabled"
+        },
+        "reasoning_effort": "high"
+      },
+      "omit_parameters": [
+        "temperature",
+        "top_p",
+        "max_tokens",
+        "max_completion_tokens",
+        "max_output_tokens"
+      ],
+      "request_headers": {}
+    }
+  },
+  "task_id": "dsh-url-deepseek-flash",
+  "output_dir": null,
+  "repeats": 4,
+  "api_concurrency_per_task": 1,
+  "max_attempts": 1,
+  "adapter_name": "dsh",
+  "agent_concurrency": 1,
+  "tool_config": {
+    "dsh_model_metadata": {
+      "contextWindow": 1048576,
+      "maxTokens": 393216,
+      "input": [
+        "text",
+        "image"
+      ],
+      "reasoningEfforts": {
+        "high": "high"
+      }
+    },
+    "max_tool_calls": 20,
+    "trajectory_timeout_seconds": 600,
+    "proxy_connect_timeout_seconds": 20,
+    "mcp_startup_timeout_seconds": 30,
+    "mcp_tool_timeout_seconds": 120,
+    "dsh_search_target": {
+      "api": "anthropic-messages",
+      "model": "deepseek-flash",
+      "client_settings": {
+        "base_url": "https://api.deepseek.com/anthropic/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "request_timeout_seconds": 120,
+        "request_parameters": {},
+        "omit_parameters": [],
+        "request_headers": {}
+      }
+    }
+  },
+  "allowed_conditions": [
+    "off"
+  ],
+  "tasks": null,
+  "artifact": null,
+  "agent_pool_dir": "outputs/.agent_slots",
+  "adapter_timeout_seconds": 720
+}

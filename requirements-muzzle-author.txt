@@ -1,0 +1,7 @@
+-r requirements-rendering.txt
+autogen-core==0.7.5
+docker==7.1.0
+rich==14.0.0
+fastapi==0.115.12
+uvicorn==0.34.2
+python-dotenv==1.1.1

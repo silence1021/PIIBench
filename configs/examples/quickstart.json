@@ -1,0 +1,9 @@
+{
+  "seed_file": "../../examples/quickstart/seed.json",
+  "initial_attack_file": "../../prompts/gepa/gepa_initial_news.json",
+  "evaluation_preset": "api-html-deepseek-flash",
+  "condition": "off",
+  "concurrency": 1,
+  "repeats": 1,
+  "max_attempts": 1
+}

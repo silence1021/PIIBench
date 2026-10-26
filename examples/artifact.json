@@ -1,0 +1,19 @@
+{
+  "schema_version": "piibench-artifact-v1",
+  "benchmark_id": "synthetic-example",
+  "scenario": "academic",
+  "method_id": "noguard",
+  "artifact_id": "fixture-noguard",
+  "provenance": {
+    "source_artifact": "synthetic-test-fixture",
+    "candidate_id": "fixture-noguard"
+  },
+  "site_root": "pages",
+  "base_url": "https://example.test/",
+  "pages": [
+    {
+      "page_id": "fixture-page",
+      "document": "index.html"
+    }
+  ]
+}

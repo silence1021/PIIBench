@@ -1,0 +1,1 @@
+window.addEventListener('DOMContentLoaded', () => { document.querySelector('#dynamic').textContent = 'JavaScript dynamic contact note'; document.querySelector('#long-tail').textContent = 'Deep node '.repeat(40); });

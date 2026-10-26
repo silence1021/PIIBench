@@ -1,0 +1,15 @@
+{
+  "desktop_viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "mobile_viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "navigation_timeout_ms": 30000,
+  "theme_wait_ms": 100,
+  "viewport_wait_ms": 50,
+  "browser_launch_timeout_ms": 30000,
+  "action_timeout_ms": 30000
+}

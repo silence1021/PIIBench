@@ -1,0 +1,1 @@
+"""methods muzzle modules."""

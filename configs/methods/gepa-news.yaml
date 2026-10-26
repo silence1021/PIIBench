@@ -1,0 +1,70 @@
+seeds_json: data/news/seeds.json
+seed_index: 0
+table_seed: 42
+fragment_profile: news
+feedback_minibatch_size: 3
+mutation_backend: openai
+mutation_model: gpt-6-luna
+mutation_temperature: null
+mutation_reasoning_effort: medium
+eval_backend: openai
+eval_model: gpt-6-luna
+eval_reasoning_effort: medium
+enable_filter: true
+filter_backend: openai
+filter_model: gpt-6-luna
+filter_temperature: null
+filter_reasoning_effort: medium
+filter_prompt_variant: mixed
+filter_prompt_profile: news
+rng_seed: 42
+timestamp_outputs: false
+initial_attack_file: prompts/gepa/gepa_initial_news.json
+initial_prompt_limit: null
+max_extensions_per_position: 20
+stagnation_patience: 8
+active_pool_size: 4
+pareto_tau: 0.05
+joint_weight: 0.1
+parent_epsilon: 0.3
+ranking_questions_per_page: 1
+ranking_repeats: 3
+parent_feedback_repeats: 3
+max_proposal_failures: 20
+attack_prompts_file: data/training_prompts.json
+rewrite_instruction_file: prompts/gepa/gepa_rewrite_v8_news_ax_edit.txt
+output_json: outputs/gepa-news/output_json.json
+cache_path: outputs/gepa-news/cache_path.json
+filter_cache_path: outputs/gepa-news/filter_cache_path.json
+mutation_cache_path: outputs/gepa-news/mutation_cache_path.json
+model_concurrency: 10
+eval_temperature: null
+html_dir: data/news/html
+resume_from_output_json: null
+rewrite_user_instruction_file: prompts/gepa/gepa_rewrite_v8_news_ax_edit_user.txt
+eval_max_retries: 3
+eval_retry_backoff_seconds: 1.0
+eval_client_settings:
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  request_timeout_seconds: 600
+  request_parameters: {}
+  omit_parameters: []
+  request_headers: {}
+filter_client_settings:
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  request_timeout_seconds: 600
+  request_parameters: {}
+  omit_parameters: []
+  request_headers: {}
+mutation_client_settings:
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  request_timeout_seconds: 600
+  request_parameters: {}
+  omit_parameters: []
+  request_headers: {}
+mutation_max_retries: 3
+mutation_retry_backoff_seconds: 1.0
+split_manifest: data/news/split.json

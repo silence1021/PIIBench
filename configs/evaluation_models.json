@@ -1,0 +1,113 @@
+{
+  "models": {
+    "luna": {
+      "label": "GPT-6 Luna",
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "api": "chat_completions",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "request_parameters": {
+        "reasoning_effort": "medium"
+      },
+      "output_token_policy": {
+        "client_max_tokens": null,
+        "api_behavior": "omit_parameter",
+        "required_api_budget_source": null
+      },
+      "omit_parameters": [
+        "temperature",
+        "top_p"
+      ]
+    },
+    "haiku": {
+      "label": "Claude Haiku 5.5",
+      "provider": "anthropic",
+      "model": "claude-haiku-5-5",
+      "api": "messages",
+      "base_url": "https://api.anthropic.com",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "request_parameters": {
+        "thinking": {
+          "type": "adaptive"
+        },
+        "output_config": {
+          "effort": "medium"
+        }
+      },
+      "output_token_policy": {
+        "client_max_tokens": null,
+        "api_behavior": "send_required_model_max",
+        "required_api_budget_source": "https://platform.claude.com/docs/en/api/models/retrieve (ModelInfo.max_tokens)"
+      },
+      "omit_parameters": [
+        "temperature",
+        "top_p",
+        "reasoning_effort"
+      ]
+    },
+    "glm": {
+      "label": "GLM-5.3 Flash",
+      "provider": "openrouter",
+      "model": "z-ai/glm-5.3-flash",
+      "api": "openai_compatible_chat_completions",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "request_parameters": {
+        "temperature": 1,
+        "provider": {
+          "only": [
+            "z-ai"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        }
+      },
+      "output_token_policy": {
+        "client_max_tokens": null,
+        "api_behavior": "omit_parameter",
+        "required_api_budget_source": null
+      },
+      "omit_parameters": [
+        "reasoning_effort",
+        "thinking",
+        "top_p"
+      ],
+      "source": "https://openrouter.ai/z-ai/glm-5.3-flash"
+    },
+    "deepseek": {
+      "label": "DeepSeek Flash",
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "api": "openai_compatible_chat_completions",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "request_parameters": {
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }
+      },
+      "output_token_policy": {
+        "client_max_tokens": null,
+        "api_behavior": "omit_parameter",
+        "required_api_budget_source": null
+      },
+      "omit_parameters": [
+        "temperature",
+        "top_p"
+      ]
+    }
+  },
+  "version_recording": [
+    "requested_model",
+    "returned_model",
+    "provider",
+    "api_version",
+    "request_parameters",
+    "output_token_policy",
+    "run_start_time"
+  ],
+  "comparison": "Frozen model/provider configurations; reasoning budgets are provider-specific, not equal-compute configurations.",
+  "parameter_status": "Shared API model registry; actual runtime parameters are frozen per run."
+}

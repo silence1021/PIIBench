@@ -1,0 +1,5 @@
+Ground one already selected Grafter proposal in the supplied static page HTML. Do not discover another location, substitute a different element, or infer a browser posting UI. If this proposal cannot be implemented as stated with one unique existing body element, return unavailable.
+
+A ready placement must use a selector that resolves to exactly one real element and one supported additive placement: before, after, prepend, or append. Preserve all existing page text, attributes, contact values, and links. The publisher-side HTML adapter inserts a visible plain-text aside around or adjacent to the chosen element.
+
+Return exactly one JSON object: {"status":"ready","selector":"...","placement":"before","reason":"..."} or {"status":"unavailable","selector":null,"placement":null,"reason":"..."}.

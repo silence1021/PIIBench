@@ -1,0 +1,16 @@
+{
+  "name": "piibench-agents",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Project-local native runtimes for PIIBench",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "0.99.2",
+    "@openai/codex": "0.160.0",
+    "@deepseek-ai/dsh": "0.1.2-rc.1",
+    "@playwright/mcp": "0.0.80",
+    "@modelcontextprotocol/sdk": "1.30.0"
+  }
+}

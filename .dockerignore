@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+.venv*
+node_modules
+outputs
+local_data
+datasets
+__pycache__
+*.pyc

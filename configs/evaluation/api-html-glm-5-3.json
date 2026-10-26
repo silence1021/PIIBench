@@ -1,0 +1,66 @@
+{
+  "experiment": {
+    "attack_method": "off",
+    "web_injection_channel": "html",
+    "mode": "api",
+    "harness_type": null
+  },
+  "observation_representation": "html",
+  "target": {
+    "backend": "openrouter",
+    "model": "z-ai/glm-5.3-flash",
+    "reasoning_effort": null,
+    "max_response_tokens": null,
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "temperature": 1,
+    "api_id": null,
+    "client_settings": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "request_timeout_seconds": 600,
+      "request_parameters": {},
+      "omit_parameters": [
+        "reasoning_effort",
+        "thinking",
+        "top_p",
+        "reasoning"
+      ],
+      "request_headers": {}
+    }
+  },
+  "task_id": "api-html-glm-5-3",
+  "output_dir": null,
+  "repeats": 4,
+  "api_concurrency_per_task": 1,
+  "max_attempts": 3,
+  "filter": {
+    "backend": "openai",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "max_response_tokens": null,
+    "prompt_variant": "canonical",
+    "prompt_profile": "academic",
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "temperature": 0.0,
+    "prompt_override": null,
+    "api_id": null,
+    "client_settings": {
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "request_timeout_seconds": 600,
+      "request_parameters": {},
+      "omit_parameters": [],
+      "request_headers": {}
+    }
+  },
+  "allowed_conditions": [
+    "off",
+    "on"
+  ],
+  "tasks": null,
+  "artifact": null
+}

@@ -1,0 +1,98 @@
+{
+  "experiment": {
+    "attack_method": "off",
+    "web_injection_channel": "html",
+    "mode": "agent",
+    "harness_type": "pi-agent"
+  },
+  "observation_representation": "html",
+  "target": {
+    "backend": "openrouter",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "reasoning_effort": "high",
+    "max_response_tokens": null,
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "temperature": 0.0,
+    "api_id": null,
+    "api": "openai-completions",
+    "client_settings": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "request_timeout_seconds": 120,
+      "request_parameters": {
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }
+      },
+      "omit_parameters": [],
+      "request_headers": {
+        "X-OpenRouter-Metadata": "enabled"
+      }
+    },
+    "pi_model": {
+      "reasoning": true,
+      "input": [
+        "text"
+      ],
+      "contextWindow": 1048576,
+      "maxTokens": 131072
+    },
+    "pi_omit_parameters": [
+      "temperature",
+      "top_p",
+      "max_tokens",
+      "max_completion_tokens",
+      "max_output_tokens",
+      "reasoning_effort",
+      "reasoning",
+      "thinking"
+    ]
+  },
+  "task_id": "pi-html-deepseek-flash",
+  "output_dir": null,
+  "repeats": 4,
+  "api_concurrency_per_task": 1,
+  "max_attempts": 3,
+  "filter": {
+    "backend": "openai",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "max_response_tokens": null,
+    "prompt_variant": "canonical",
+    "prompt_profile": "academic",
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "temperature": 0.0,
+    "prompt_override": null,
+    "api_id": null,
+    "client_settings": {
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "request_timeout_seconds": 600,
+      "request_parameters": {},
+      "omit_parameters": [],
+      "request_headers": {}
+    }
+  },
+  "adapter_name": "pi-agent",
+  "agent_concurrency": 1,
+  "tool_config": {
+    "tool_profile": "html-read-only",
+    "max_tool_calls": 20,
+    "trajectory_timeout_seconds": 600,
+    "proxy_connect_timeout_seconds": 20,
+    "pi_http_idle_timeout_seconds": 120
+  },
+  "allowed_conditions": [
+    "off",
+    "on"
+  ],
+  "tasks": null,
+  "artifact": null,
+  "agent_pool_dir": "outputs/.agent_slots",
+  "adapter_timeout_seconds": 720
+}

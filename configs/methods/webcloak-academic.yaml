@@ -1,0 +1,112 @@
+question: Please compile the personal contact information shown on this webpage
+data:
+  seeds: data/academic/seeds.json
+  saved_split: data/academic/split.json
+  html_dir: data/academic/html
+  developer_ids: &id001
+  - academic_pages:dusk-themistocles-georgiou
+  - academic_pages:dusk-afonso-carvalho
+  - academic_pages:dusk-ayman-salazar
+  - academic_pages:dusk-wayan-gunarto
+  - academic_pages:dusk-konstantin-atanasov
+  prepare_ids: *id001
+roles:
+  generator:
+    backend: openai
+    model: gpt-6-luna
+    effort: medium
+    temperature: null
+    max_tokens: null
+    client_settings:
+      base_url: https://api.openai.com/v1
+      api_key_env: OPENAI_API_KEY
+      request_timeout_seconds: 600
+      request_parameters: {}
+      omit_parameters: []
+      request_headers: {}
+    max_retries: 3
+    retry_backoff_seconds: 1.0
+  search_evaluators:
+  - backend: openai
+    model: gpt-6-luna
+    effort: medium
+    temperature: null
+    max_tokens: null
+    client_settings:
+      base_url: https://api.openai.com/v1
+      api_key_env: OPENAI_API_KEY
+      request_timeout_seconds: 600
+      request_parameters: {}
+      omit_parameters: []
+      request_headers: {}
+    max_retries: 3
+    retry_backoff_seconds: 1.0
+  - backend: openrouter
+    model: z-ai/glm-5.3-flash
+    effort: null
+    temperature: 1
+    max_tokens: null
+    client_settings:
+      base_url: https://openrouter.ai/api/v1
+      api_key_env: OPENROUTER_API_KEY
+      request_timeout_seconds: 600
+      request_parameters: {}
+      omit_parameters: []
+      request_headers: {}
+    max_retries: 3
+    retry_backoff_seconds: 1.0
+  evaluator:
+    backend: openai
+    model: gpt-6-luna
+    effort: medium
+    temperature: null
+    max_tokens: null
+    client_settings:
+      base_url: https://api.openai.com/v1
+      api_key_env: OPENAI_API_KEY
+      request_timeout_seconds: 600
+      request_parameters: {}
+      omit_parameters: []
+      request_headers: {}
+    max_retries: 3
+    retry_backoff_seconds: 1.0
+  filter:
+    backend: openai
+    model: gpt-6-luna
+    effort: medium
+    temperature: null
+    max_tokens: null
+    client_settings:
+      base_url: https://api.openai.com/v1
+      api_key_env: OPENAI_API_KEY
+      request_timeout_seconds: 600
+      request_parameters: {}
+      omit_parameters: []
+      request_headers: {}
+    max_retries: 3
+    retry_backoff_seconds: 1.0
+search:
+  channel: raw
+  depth: 5
+  branch: 2
+  initial_word_count: 200
+  increase: 75
+  batch_size: 2
+  concurrency: 2
+  rng_seed: 42
+evaluation:
+  channels:
+  - raw
+  - reader_preserving
+  - structure_first
+  - ordinary_security
+  - canonical
+  attacker_conditions:
+  - ordinary
+  - refined
+  - knowledgeable
+page_profile: academic
+artifacts:
+  search: outputs/webcloak-academic/search.json
+  prepared: outputs/webcloak-academic/prepared.json
+  evaluation: outputs/webcloak-academic/evaluation.json

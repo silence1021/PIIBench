@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "id": "profile-1",
+      "url": "https://example.test/profile",
+      "capture": {
+        "mode": "browser_first",
+        "ready_selector": null,
+        "wait_after_ready_ms": 1000,
+        "dismiss_selectors": [],
+        "contains_visual_pii": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1200
+        },
+        "navigation_timeout_ms": 45000,
+        "robots_timeout_seconds": 10,
+        "browser_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 PIIBenchSnapshotResearch/1.0",
+        "action_timeout_ms": 30000
+      },
+      "privacy": {
+        "neutralize_external_links": true,
+        "placeholder_image_selectors": []
+      },
+      "subject": {
+        "fields": [
+          {
+            "kind": "name",
+            "original": "Original Name",
+            "synthetic": "Synthetic Name",
+            "selectors": [
+              "h1"
+            ]
+          }
+        ]
+      },
+      "contact_allowlist": []
+    }
+  ]
+}

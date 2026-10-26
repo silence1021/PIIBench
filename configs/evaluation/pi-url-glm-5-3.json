@@ -1,0 +1,81 @@
+{
+  "experiment": {
+    "attack_method": "off",
+    "web_injection_channel": "url",
+    "mode": "agent",
+    "harness_type": "pi-agent"
+  },
+  "observation_representation": "backend_native",
+  "target": {
+    "backend": "openrouter",
+    "model": "z-ai/glm-5.3-flash",
+    "reasoning_effort": "none",
+    "max_response_tokens": null,
+    "required_finish_reasons": [
+      "stop"
+    ],
+    "temperature": null,
+    "api_id": null,
+    "api": "openai-completions",
+    "client_settings": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "request_timeout_seconds": 120,
+      "request_parameters": {
+        "temperature": 1
+      },
+      "omit_parameters": [
+        "reasoning_effort",
+        "thinking",
+        "top_p",
+        "reasoning"
+      ],
+      "request_headers": {}
+    },
+    "pi_model": {
+      "reasoning": false,
+      "input": [
+        "text"
+      ],
+      "contextWindow": 1048576,
+      "maxTokens": 131072
+    },
+    "pi_omit_parameters": [
+      "top_p",
+      "max_tokens",
+      "max_completion_tokens",
+      "max_output_tokens",
+      "reasoning_effort",
+      "reasoning",
+      "thinking"
+    ]
+  },
+  "task_id": "pi-url-glm-5-3",
+  "output_dir": null,
+  "repeats": 4,
+  "api_concurrency_per_task": 1,
+  "max_attempts": 3,
+  "adapter_name": "pi-agent",
+  "agent_concurrency": 1,
+  "url_prompt_defense": {
+    "prompt_file": "prompts/attacker/in_agent_filter.txt",
+    "placement": "system"
+  },
+  "allowed_conditions": [
+    "off",
+    "on"
+  ],
+  "tasks": null,
+  "artifact": null,
+  "agent_pool_dir": "outputs/.agent_slots",
+  "adapter_timeout_seconds": 720,
+  "tool_config": {
+    "max_tool_calls": 20,
+    "trajectory_timeout_seconds": 600,
+    "proxy_connect_timeout_seconds": 20,
+    "mcp_startup_timeout_seconds": 30,
+    "mcp_tool_timeout_seconds": 120,
+    "pi_http_idle_timeout_seconds": 120,
+    "tool_profile": "native"
+  }
+}
